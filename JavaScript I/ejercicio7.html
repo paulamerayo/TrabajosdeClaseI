@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio calculadora avascript con if</title>
+    <meta name="description" content="Ejemplo de calculadora con Javascript utilizando if">
+    <script>
+        function calcular(){
+            var operacion = document.getElementById('operador').value;
+            var operando1 = parseInt(document.getElementById('operando1').value);
+            var operando2 = parseInt(document.getElementById('operando2').value);
+            var resultado;
+            if(operacion=="+"){
+                resultado = operando1 + operando2;
+            }else if(operacion=="-"){
+                resultado = operando1 - operando2;
+            }else if(operacion=="*"){
+                resultado = operando1 * operando2;
+            }else{
+                resultado = operando1 / operando2;
+            }
+            document.getElementById('resultado').value=resultado;
+        }
+    </script>
+</head>
+<body>
+    <h1>Ejercicio de la calculadora programado con Javascript</h1>
+    <form>
+        <input id="operando1" type="text">
+        <select id="operador">
+            <option selected="selected" value="+">+
+            </option>
+            <option value="-">-
+            </option>
+            <option value="*">*
+            </option>
+            <option value="/">/
+            </option>
+        </select>
+        <input id="operando2" type="text">
+        <input value="Calcular" onclick="calcular()" type="button">
+    </form><br>
+    <input id="resultado" type="text">
+</body>
+</body>
+</html>

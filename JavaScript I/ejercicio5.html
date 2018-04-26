@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ejercicio número secreto con bucle while | Pablo Monteserín</title>
+    <meta name="description" content="Pequeño juego consistente en acertar un número secreto utilizando Javascript en que utilizaremos un bucle for, un bucle while, variables y la estructura if">
+
+</head>
+<body>
+    <h1>Programación del juego de adivinar un número secreto programado con Javascript</h1>
+    <script>
+    var numSecreto = Math.round(Math.random()*5);
+
+        var quieroJugar = true;
+        while(quieroJugar==true){
+            for(var i =0; i<=2; i++){
+                var numUsuario = prompt("Introduzca un número del 1 al 5, por favor");
+                if(numUsuario == numSecreto){
+                    alert("Ha acertado el número secreto, enhorabuena");
+                    break;
+                }else{
+                    alert("Ha fallado");
+                }
+            }
+            quieroJugar = confirm("¿Quieres volver a jugar?");
+        }
+        alert("fin del juego");
+    </script>
+</body>
+
+</html>

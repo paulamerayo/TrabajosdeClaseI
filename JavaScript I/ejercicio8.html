@@ -1,0 +1,24 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Conversor de euros a dólares por id con Javascript</title>
+  <meta name="description" content="Conversor de euros a dólares por id con getElementById con Javascript">
+  <script>
+  function convertir(){
+  var valorIntroducido = document.getElementById("dato").value;
+  valorIntroducido = valorIntroducido*1.23;
+  document.getElementById("resultado").value = valorIntroducido;
+  }
+ </script>
+</head>
+<body>
+  <h1>Conversión de euros a dólares</h1>
+  <form>
+    Euros: <input id="dato" type="text"><br>
+    Dolares: <input id="resultado" type="text"><br>
+    <input value="Analizar" onclick="convertir()" type="button">
+ </form>
+</body>
+</html>

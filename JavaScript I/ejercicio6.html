@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+   <meta charset="UTF-8">
+   <title>Recuperar valor por id con Javascript</title>
+   <meta name="description" content="Programa transforma grados centígrados en grados Fahrenheit">
+   <script>
+   function convertir(){
+     var valorIntroducido = document.getElementById("dato").value;
+     valorIntroducido = valorIntroducido*9/5 + 32;
+     document.getElementById("resultado").value = valorIntroducido;
+   }
+   </script>
+ </head>
+ <body>
+   <h1>Función de Javascript que convierte grados centígrados en grados Fahrenheit</h1>
+   <form>
+     Grados centígrados: <input id="dato" type="text"><br>
+     Grados Farenheit: <input id="resultado" value="grados Farenheit" type="text"><br>
+     <input value="Analizar" onclick="convertir()" type="button">
+   </form>
+ </body>
+ </html>
