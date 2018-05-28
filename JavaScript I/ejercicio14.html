@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang=en dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejercicio 14</title>
+<script>
+function enviarFormulario() {
+ var nombre = document.getElementById('nombre');
+ var tipocaja = document.getElementById('tipocaja');
+ var dimension = document.formulario.radioButtonName('dimension');
+ alert(nombre "ha selecionado una caja de " + tipocaja, "con unas dimensiones " + dimension);
+}
+
+</script>
+<body>
+<form method="GET">
+Nombre del cliente: <input type="text" class="form" name="nombre" placeholder="Escribe tu nombre" id="nombre"><br>
+
+Material de la caja:
+<select name="tipocaja" id="tipocaja">
+  <option value="Carton">Cartón</option>
+  <option value="Madera">Madera</option>
+  <option value="Hierro">Hierro</option>
+  <option value="Aluminio">Aluminio</option>
+</select><br>
+
+Seleccione las dimensiones para la caja:<br>
+  <input type="radio" name="dimension" id="dimension1" value="Pequeña" checked>Diminuta<br>
+  <input type="radio" name="dimension" id="dimension2" value="Mediana">Mediana<br>
+  <input type="radio" name="dimension" id="dimension3" value="Grande">Grande<br>
+  <input type="submit" onclick="return enviarFormulario();" value="enviar">
+
+</form>
+</body>
+</html>
